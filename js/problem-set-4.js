@@ -3,7 +3,7 @@
  */
 
 function hello() {
-  var div = document.getElementById("output1") ;
+  let div = document.getElementById("output1") ;
   	div.innerHTML = "Hello, AP Computer Science Principles!";
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
@@ -16,7 +16,7 @@ function hello() {
 
 function helloAgain() {
 
-  //////////// DO NOT MODIFY      Use the @name variable to store
+  //////////// DO NOT MODIFY      Use the @name letiable to store
   let name; // DO NOT MODIFY      the value that the user enters
   //////////// DO NOT MODIFY      in response to your prompt.
 
@@ -41,7 +41,7 @@ function celsius() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-var fahrenheit = ((cels * 9/5) + 32).toFixed(2);
+let fahrenheit = ((cels * 9/5) + 32).toFixed(2);
 document.getElementById("output3").innerHTML=(cels + " degrees Celsius equals " + fahrenheit + " degrees Fahrenheit.")
 
   ////////////////////////// DO NOT MODIFY
@@ -62,7 +62,7 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  var celsius = ((fahr -32) * 5 / 9).toFixed(2);
+  let celsius = ((fahr -32) * 5 / 9).toFixed(2);
   document.getElementById("output4").innerHTML=(fahr + " degrees Fahrenheit equals " + celsius + " degrees Celsius.")
 
   ///////////////////////////// DO NOT MODIFY
@@ -87,11 +87,12 @@ function inches() {
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-var miles=Math.floor(inches/6360)
-var yards=Math.floor(inches/32) - (miles/63360);
-var feet=Math.floor(inches/36) - (miles/63360) - (yards * 36));
-inches=Math.floor(inches/6360) - (miles/63360) - (yards * 36) (feet * 12));
-document.getElementById("output5").innerHTML=
+let miles = Math.floor(inches * 0.000015783);
+let yards = Math.floor(inches * 0.027778);
+let feet = Math.floor(inches * 0.083333);
+let inch = Math.floor(inches);
+document.getElementById("output5").innerHTML=("Miles: " + miles + "<br>Yards: " + yards + "<br>Feet: " + feet + "<br>Inches: " + inch)
+
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
@@ -115,7 +116,10 @@ function centimeters() {
   let centimeters = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 6 CODE HERE
+let kilometers = Math.floor(centimeters / 100000 );
+let meters = Math.floor(centimeters / 100);
+let centi = Math.floor(centimeters);
+document.getElementById("output6").innerHTML=("Kilometers: " + kilometers + "<br>Meters: " + meters + "<br>Centimeters: " + centi)
 
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
